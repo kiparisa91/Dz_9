@@ -7,7 +7,7 @@ public class Author {
     public Author(String authorName, String authorSurname) {
             this.authorName = authorName;
             this.authorSurname = authorSurname;
-            if (this.authorName.length() == 0 || this.authorSurname.length() == 0) {
+        if (this.authorName.isEmpty() || this.authorSurname.isEmpty()) {
                 System.out.println("Книга не может создаваться без автора!");
                 System.exit(0);
             }

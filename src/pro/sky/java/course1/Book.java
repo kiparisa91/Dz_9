@@ -3,7 +3,7 @@ package pro.sky.java.course1;
 public class Book {
     private final String bookName;
     private int publishingYear;
-    Author author;
+    private final Author author;
 
     public Book(String bookName, Author author, int publishingYear) {
             this.bookName = bookName;
