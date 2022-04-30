@@ -1,5 +1,7 @@
 package pro.sky.java.course1;
 
+import java.util.Objects;
+
 public class Book {
     private final String bookName;
     private int publishingYear;
@@ -27,5 +29,20 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
+    public String toString() {
+        return this.bookName + " " + this.author + " " + this.publishingYear;
+    }
+
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book Book = (Book) other;
+        return getBookName().equals(Book.getBookName());
+    }
+
+    public int hashCode() {
+        return Objects.hash(getBookName());
+    }
 
 }

@@ -1,5 +1,7 @@
 package pro.sky.java.course1;
 
+import java.util.Objects;
+
 public class Author {
     private final String authorName;
     private final String authorSurname;
@@ -19,6 +21,22 @@ public class Author {
 
     public String getAuthorSurname() {
         return authorSurname;
+    }
+
+    public String toString() {
+        return this.authorName + " " + this.authorSurname;
+    }
+
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author Author = (Author) other;
+        return getAuthorSurname().equals(Author.getAuthorSurname());
+    }
+
+    public int hashCode() {
+        return Objects.hash(getAuthorSurname());
     }
 
 }

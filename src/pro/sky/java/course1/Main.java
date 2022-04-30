@@ -13,6 +13,15 @@ public class Main {
         System.out.println(bookTwo.getBookName() + ", " + bookTwo.getAuthor().getAuthorName() + " " + bookTwo.getAuthor().getAuthorSurname() + ", " + bookTwo.getPublishingYear());
         bookTwo.setPublishingYear(1990);
         System.out.println("Новый год издания: " + bookTwo.getBookName() + ", " + bookTwo.getAuthor().getAuthorName() + " " + bookTwo.getAuthor().getAuthorSurname() + ", " + bookTwo.getPublishingYear());
+        System.out.println("-------------------------------------------------------------");
+        System.out.println(bookOne);
+        System.out.println(bookTwo);
+        System.out.println(authorOne.equals(authorTwo));
+        System.out.println(bookOne.equals(bookTwo));
+        System.out.println(bookOne.getBookName().hashCode());
+        System.out.println(bookTwo.getBookName().hashCode());
+        System.out.println(authorOne.getAuthorSurname().hashCode());
+        System.out.println(authorTwo.getAuthorSurname().hashCode());
 
     }
 }
